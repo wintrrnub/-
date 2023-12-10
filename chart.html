@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Meyawo landing page.">
+    <meta name="author" content="Devcrud">
+    <title>Thanasap</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- Bootstrap + Meyawo main styles -->
+    <link rel="stylesheet" href="assets/css/meyawo.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- Page Navbar -->
+    <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="logo" href="#">Javascript</a>
+            <ul class="nav">
+                <li class="item">
+                    <a class="link" href="index.html">Home</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="javascript.html">Javascript</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="api.html">API</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="chart.html">Chart</a>
+                </li>
+            </ul>
+            <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
+                <div class="hamburger-box">
+                    <div class="hamburger-inner"></div>
+                </div>
+            </a>
+        </div>
+    </nav><!-- End of Page Navbar -->
+
+    <!-- page header -->
+    <header id="home" class="header">
+        <div class="overlay"></div>
+        <div class="header-content container">
+            <h1 class="header-title">
+                <span class="up">HI!</span>
+                <span class="down">Welcome To_My_Works</span>
+            </h1>
+        </div>
+    </header><!-- end of page header -->
+
+
+    <!-- blog section -->
+    <section class="section" id="blog">
+        <!-- container -->
+        <div class="container text-center" style="width: 700px;">
+            <h6 class="section-title mb-6">Chart</h6>
+
+            <!-- blog-wrapper -->
+            <div class="blog-card">
+                <div class="blog-card-body">
+                    <h5 class="blog-card-title">My Chart</h6><br>
+                        <canvas id="myChartx" style="width:100%;max-width:600px"></canvas>
+
+                        <script>
+                            const xValues = ["Cat", "Dog", "Bird", "Ant", "Your Love"];
+                            const yValues = [55, 49, 44, 24, 15];
+                            const barColors = ["pink", "green", "skyblue", "orange", "brown"];
+
+                            new Chart("myChartx", {
+                                type: "bar",
+                                data: {
+                                    labels: xValues,
+                                    datasets: [{
+                                        backgroundColor: barColors,
+                                        data: yValues
+                                    }]
+                                },
+                                options: {
+                                    legend: { display: false },
+                                    title: {
+                                        display: true,
+                                        text: "Best Pets In The world"
+                                    }
+                                }
+                            });
+                        </script>
+                </div>
+            </div><!-- end of blog wrapper -->
+
+            <!-- blog-wrapper -->
+            <div class="blog-card">
+                <div class="blog-card-body">
+                    <h5 class="blog-card-title">AJAX API Chart</h6><br>
+                        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+                        <div id="columnchart_values" style="width:100%;max-width:600px"></div>
+                </div>
+            </div><!-- end of blog wrapper -->
+
+        </div><!-- end of container -->
+    </section><!-- end of blog section -->
+
+    <!-- footer -->
+    <div class="container">
+        <footer class="footer">
+            <p class="mb-0">Copyright
+                <script>document.write(new Date().getFullYear())</script> &copy; <a href="#">Thanasap Soha kktech</a>
+            </p>
+            <div class="social-links text-right m-auto ml-sm-auto">
+                <a href="https://www.facebook.com/FXAAon?mibextid=gik2fB" target="_blank" class="link"><i
+                        class="ti-facebook"></i></a>
+            </div>
+        </footer>
+    </div> <!-- end of page footer -->
+
+    <!-- core  -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap 3 affix -->
+    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Meyawo js -->
+    <script src="assets/js/meyawo.js"></script>
+
+</body>
+
+</html>
